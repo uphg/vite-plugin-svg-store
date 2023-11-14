@@ -13,13 +13,13 @@ const argv = minimist(process.argv.slice(2));
 // use pnpm build -v 0.1.x
 run(argv)
 async function run(argv) {
-  const { v: version = '0.1.0' } = argv
+  const { v: version = '0.1.1' } = argv
   const packageJson = {
     name: 'vite-plugin-svg-store',
     version,
-    license: 'MIT',
+    description: 'SVG store plugin for Vite',
     main: 'cjs/index.js',
-    type: 'module',
+    module: 'index.js',
     exports: {
       '.': {
         import: {
@@ -33,12 +33,15 @@ async function run(argv) {
       }
     },
     types: 'index.d.ts',
-    description: 'SVG store plugin for Vite',
-    keywords: ['vite', 'svg', 'store'],
-    homepage: 'https://github.com/uphg/utils#readme',
-    repository: 'uphg/utils',
-    bugs: 'uphg/utils/issues',
-    author: 'Lv Heng <lvheng233@gmail.com>'
+    license: 'MIT',
+    keywords: ['vite', 'vite-plugin', 'svg', 'sprite', 'store', 'svgo'],
+    homepage: 'https://github.com/uphg/vite-plugin-svg-store#readme',
+    repository: 'uphg/vite-plugin-svg-store',
+    bugs: 'uphg/vite-plugin-svg-store/issues',
+    author: 'Lv Heng <lvheng233@gmail.com>',
+    peerDependencies: {
+      vite: '^4.5.0'
+    }
   }
 
   await execa('tsc')
