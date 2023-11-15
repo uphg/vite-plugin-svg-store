@@ -24,7 +24,7 @@
   "bugs": "uphg/vite-plugin-svg-store/issues",
   "author": "Lv Heng <lvheng233@gmail.com>",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.mjs",
     "test": "jest",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
