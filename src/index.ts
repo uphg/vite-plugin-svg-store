@@ -17,7 +17,8 @@ const XMLNS = 'http://www.w3.org/2000/svg'
 const XMLNS_LINK = 'http://www.w3.org/1999/xlink'
 
 export default (options?: SvgStoreOptions) => {
-  const { optimizeOptions, symbolId } = options ?? {}
+  const { optimizeOptions } = options ?? {}
+  const symbolId = options?.symbolId ?? 'icon-[name]'
   const dirs = options?.dirs ?? ['src/assets/icons'];
   const containerId = options?.containerId ?? '__svg__store__dom__'
 
@@ -67,13 +68,13 @@ function createMount(code: string, containerId: string) {
 if (typeof window !== 'undefined') {
   function load() {
     const div = document.createElement('div')
-    const svg = document.createElementNS('${XMLNS}', 'svg');
+    const svg = document.createElementNS('${XMLNS}', 'svg')
   
     svg.innerHTML = \`${code}\`
-    svg.id = '${containerId}';
-    svg.setAttribute('xmlns','${XMLNS}');
-    svg.setAttribute('xmlns:link','${XMLNS_LINK}');
+    svg.setAttribute('xmlns','${XMLNS}')
+    svg.setAttribute('xmlns:link','${XMLNS_LINK}')
   
+    div.id = '${containerId}'
     div.style.position = 'absolute'
     div.style.width = '0'
     div.style.height = '0'
