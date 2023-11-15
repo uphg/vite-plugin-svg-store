@@ -18,7 +18,14 @@
   },
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "keywords": ["vite", "vite-plugin", "svg", "sprite", "store", "svgo"],
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "svg",
+    "sprite",
+    "store",
+    "svgo"
+  ],
   "homepage": "https://github.com/uphg/vite-plugin-svg-store#readme",
   "repository": "uphg/vite-plugin-svg-store",
   "bugs": "uphg/vite-plugin-svg-store/issues",
@@ -26,9 +33,6 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "jest",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
     "example:dev": "cd example && vite"
   },
   "devDependencies": {
@@ -50,8 +54,7 @@
     "ts-node": "10.9.1",
     "tslib": "2.6.1",
     "typescript": "5.0.2",
-    "vite": "^4.5.0",
-    "vitepress": "1.0.0-beta.7"
+    "vite": "^4.5.0"
   },
   "peerDependencies": {
     "vite": "^4.5.0"
