@@ -6,7 +6,7 @@ import SVGCompiler from 'svg-baker'
 
 export type { SvgoOptimizeOptions };
 export interface SvgStoreOptions {
-  inputDirs?: string
+  dirs?: string[] // default ['src/assets/icons']
   symbolId?: string // 'icon-[name]'
   optimizeOptions?: boolean | SvgoOptimizeOptions
   containerId?: string
@@ -18,7 +18,7 @@ const XMLNS_LINK = 'http://www.w3.org/1999/xlink'
 
 export default (options?: SvgStoreOptions) => {
   const { optimizeOptions, symbolId } = options ?? {}
-  const inputDirs = options?.inputDirs ?? ['src/assets/icons'];
+  const dirs = options?.dirs ?? ['src/assets/icons'];
   const containerId = options?.containerId ?? '__svg__store__dom__'
 
   const plugin: Plugin = {
@@ -34,7 +34,7 @@ export default (options?: SvgStoreOptions) => {
       const svgCompiler = new SVGCompiler();
       let sprite = '' 
 
-      for (const dir of inputDirs) {
+      for (const dir of dirs) {
         const filePaths = fg.sync('**/*.svg', { cwd: dir, absolute: true })
 
         if (filePaths.length <= 0) { continue }
