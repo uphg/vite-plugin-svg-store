@@ -1,7 +1,28 @@
 {
-  "name": "ts-library-starter",
-  "version": "0.0.1",
-  "type": "module",
+  "name": "vite-plugin-svg-store",
+  "version": "0.1.2",
+  "description": "SVG store plugin for Vite",
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": ["vite", "vite-plugin", "svg", "sprite", "store", "svgo"],
+  "homepage": "https://github.com/uphg/vite-plugin-svg-store#readme",
+  "repository": "uphg/vite-plugin-svg-store",
+  "bugs": "uphg/vite-plugin-svg-store/issues",
+  "author": "Lv Heng <lvheng233@gmail.com>",
   "scripts": {
     "build": "node scripts/build.js",
     "test": "jest",
@@ -23,7 +44,6 @@
     "execa": "7.2.0",
     "fs-extra": "11.1.1",
     "jest": "29.6.2",
-    "minimist": "1.2.8",
     "rollup": "3.27.0",
     "rollup-plugin-esbuild": "5.0.0",
     "rollup-plugin-typescript2": "0.35.0",
