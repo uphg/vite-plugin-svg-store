@@ -26,3 +26,13 @@ export default defineConfig({
   ]
 })
 ```
+
+## Options
+
+| name            | default                | description               |
+| --------------- | ---------------------- | ------------------------- |
+| dirs            | `['src/assets/icons']` | svg file directory        |
+| symbolId        | `icon-[name]`          | icon id format            |
+| optimizeOptions | `undefined`            | svgo optimization options |
+| containerId     | `__svg__store__dom__`  | svg container id          |
+
