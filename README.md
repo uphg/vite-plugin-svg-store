@@ -27,6 +27,13 @@ export default defineConfig({
 })
 ```
 
+Import in main file
+
+```js
+// index.js
+import 'virtual:svg-store'
+```
+
 ## Options
 
 | name            | default                | description               |
