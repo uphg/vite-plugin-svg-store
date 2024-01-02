@@ -1,9 +1,10 @@
 {
   "name": "vite-plugin-svg-store",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "SVG store plugin for Vite",
   "main": "dist/cjs/index.js",
   "module": "dist/index.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": {
@@ -54,10 +55,10 @@
     "ts-node": "10.9.1",
     "tslib": "2.6.1",
     "typescript": "5.0.2",
-    "vite": "^4.5.0"
+    "vite": "^5.0.10"
   },
   "peerDependencies": {
-    "vite": "^4.5.0"
+    "vite": ">=4.5.0"
   },
   "dependencies": {
     "fast-glob": "^3.3.2",
